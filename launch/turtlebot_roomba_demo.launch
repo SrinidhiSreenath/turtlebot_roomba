@@ -1,0 +1,12 @@
+<launch>
+<!-- Launch the turtlebot gazebo node -->
+<include file= "$(find turtlebot_gazebo)/launch/turtlebot_world.launch" />
+
+<!-- Launch Walker Node -->
+<node 
+    pkg = "turtlebot_roomba" 
+    type = "turtlebot_roomba_node"
+    name = "turtlebot_roomba_node"
+    output = "screen"
+/>
+</launch>
