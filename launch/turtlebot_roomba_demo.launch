@@ -1,7 +1,12 @@
 <launch>
+<!-- Argument to facilitate recording rosbag -->
+<arg 
+    name="rosbagRecord" 
+    default = "false"
+/>
 <!-- Launch the turtlebot gazebo node -->
-<include file= "$(find turtlebot_gazebo)/launch/turtlebot_world.launch" />
-
+<include file= "$(find turtlebot_gazebo)/launch/turtlebot_world.launch" >
+</include>
 <!-- Launch Walker Node -->
 <node 
     pkg = "turtlebot_roomba" 
@@ -9,4 +14,13 @@
     name = "turtlebot_roomba_node"
     output = "screen"
 />
+<!-- Record rosbag if prompted -->
+<node
+    pkg = "rosbag"
+    name = "record"
+    type = "record"
+    args = "-a -x /camera/(.*) -O $(find turtlebot_roomba)/results/turtlebotWalker.bag"
+    output = "screen"
+    if = "$(arg rosbagRecord)"
+/>  
 </launch>
