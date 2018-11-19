@@ -42,7 +42,11 @@
  *  Main source file to implement the walker class for navigation of turtlebot.
  *
  */
-#include <ros.h>
+// Walker class header
+#include "turtlebot_roomba/Walker.hpp"
+
+// ROS Console
+#include <ros/console.h>
 
 /**
  *   @brief  Main function to set up the ROS node and implement the navigation
@@ -58,14 +62,17 @@ int main(int argc, char **argv) {
   ros::init(argc, argv, "turtlebot_walker");
   ros::NodeHandle nh;
 
-  // Tell ROS how fast to run this node.
-  ros::Rate rate(frequency);
-
-  // Main loop.
-  while (nh.ok()) {
-    ros::spinOnce();
-    rate.sleep();
+  // Change logger level to DEBUG.
+  if (ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME,
+                                     ros::console::levels::Debug)) {
+    ros::console::notifyLoggerLevelsChanged();
   }
+
+  // Construct the walker class for navigation of turtlebot
+  Walker walker(nh);
+
+  // Spin node until termination
+  ros::spin();
 
   return 0;
 }
