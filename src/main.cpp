@@ -42,11 +42,11 @@
  *  Main source file to implement the walker class for navigation of turtlebot.
  *
  */
-// Walker class header
-#include "turtlebot_roomba/Walker.hpp"
-
 // ROS Console
 #include <ros/console.h>
+
+// Walker class header
+#include "turtlebot_roomba/Walker.hpp"
 
 /**
  *   @brief  Main function to set up the ROS node and implement the navigation
