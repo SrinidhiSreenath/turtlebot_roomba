@@ -1,3 +1,52 @@
+/************************************************************************************
+ * BSD 3-Clause License
+ * Copyright (c) 2018, Srinidhi Sreenath
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ ************************************************************************************/
+/**
+ *  @file    Walker.cpp
+ *  @author  Srinidhi Sreenath (SrinidhiSreenath)
+ *  @date    11/18/2018
+ *  @version 1.0
+ *
+ *  @brief   Walker class definition.
+ *
+ *  @section DESCRIPTION
+ *
+ *  Source file for class Walker. The class implements a simple walker algorithm
+ *  to emulate roombs robot's behavior. The class commands the turtlebot to
+ *  navigate and subscribes to laser scan data to check for potential
+ *  collisions. If a possible collision is expected, the turtlebot is asked to
+ *  navigate in a different direction to avoid collision.
+ *
+ */
+
 // Walker class header
 #include "turtlebot_roomba/Walker.hpp"
 
