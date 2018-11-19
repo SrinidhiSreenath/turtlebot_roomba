@@ -1,0 +1,5 @@
+Done processing ./src/main.cpp
+Done processing ./src/Walker.cpp
+./include/turtlebot_roomba/Walker.hpp:101:  Is this a non-const reference? If so, make const or use a pointer: ros::NodeHandle &n  [runtime/references] [2]
+Done processing ./include/turtlebot_roomba/Walker.hpp
+Total errors found: 1
